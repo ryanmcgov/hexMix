@@ -17,6 +17,7 @@
     "angular-route": "~1.4.3",
     "underscore": "~1.8.3",
     "angular": "~1.4.3",
-    "spectrum": "~1.7.0"
+    "spectrum": "~1.7.0",
+    "fontawesome": "~4.3.0"
   }
 }
