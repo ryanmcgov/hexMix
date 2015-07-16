@@ -1,0 +1,11 @@
+<h2>Inspect tha Hex</h2>
+<input type='text' class="basic"/>
+<em id='basic-log'></em>
+
+<script>
+$(".basic").spectrum({
+    color: "#f00",
+    change: function(color) {
+        $("#basic-log").text(color.toHexString());
+    }
+</script>
