@@ -1,11 +1,43 @@
+<!--
+
+HEADER
+
+INFORMATION
+
+GOES HERE
+
+-->
 <h2>Inspect tha Hex</h2>
 <input type='text' class="basic"/>
 <em id='basic-log'></em>
 
+    <label>
+       Palette Title:
+       <input type="text" name="userName" ng-model="user.name" placeholder="enter a name for your mix" required>
+    </label>
+    <label>
+       Keywords:
+       <input type="text" name="userName" ng-model="user.name" placeholder="tags, keywords, feelings, etc.">
+    </label>
+    <button type="button" name="button">new palette!</button>
+    <h3>{{palette.title}}</h3><h5>{{palette.keyword}}</h5>
+    <ul>
+      <li class="hex-area" id="hex1"><input type="button" name="name" value=""></li>
+      <!--{{palette.hexName}} -->
+      <li class="hex-area" id="hex2"><input type="button" name="name" value=""></li>
+      <!--{{palette.hexName}}-->
+      <li class="hex-area" id="hex3"><input type="button" name="name" value=""></li>
+      <!--{{palette.hexName}}-->
+      <li class="hex-area" id="hex4"><input type="button" name="name" value=""></li>
+      <!--{{palette.hexName}}-->
+      <li class="hex-area" id="hex5"><input type="button" name="name" value=""></li>
+      <!--{{palette.hexName}}-->
+    </ul>
+     <button type="button" name="button" required>palettized!</button>
 <script>
 $(".basic").spectrum({
     color: "#f00",
     change: function(color) {
-        $("#basic-log").text(color.toHexString());
+        $("#hex1").text(color.toHexString());
     }
 </script>
