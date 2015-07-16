@@ -10,6 +10,10 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainController'
       })
+      .when('/add' {
+        templateUrl: 'views/add.html',
+        controller: 'MainController'
+      })
       .when('/404', {
         template: '<h2>Sorry, colors are for winners</h2>'
       })
