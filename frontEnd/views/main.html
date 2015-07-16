@@ -1,0 +1,17 @@
+<input type="text" ng-model="search.keyword" placeholder="search keyword" class="Search">
+<div class ="paletteMainPage" ng-repeat="palette in palettes">
+  <ul>
+    <li class="hexBox" style="color:{{palette.hexes.hex1}}"><div class="hexText hideInfo">{{palette.hexes.hex1}}</div></li>
+    <li class="hexBox" style="color:{{palette.hexes.hex2}}"><div class="hexText hideInfo">{{palette.hexes.hex2}}</div></li>
+    <li class="hexBox" style="color:{{palette.hexes.hex3}}"><div class="hexText hideInfo">{{palette.hexes.hex3}}</div></li>
+    <li class="hexBox" style="color:{{palette.hexes.hex4}}"><div class="hexText hideInfo">{{palette.hexes.hex4}}</div></li>
+    <li class="hexBox" style="color:{{palette.hexes.hex5}}"><div class="hexText hideInfo">{{palette.hexes.hex5}}</div></li>
+  </ul>
+  <div class="hideInfo">
+    <ul>
+      <li class="infoTitleText">{{palette.title}}</li>
+      <li class="infoKeywordText">{{palette.keyword}}</li>
+      <li class="closeButton">Close</li>
+    </ul>
+  </div>
+</div>
