@@ -2,15 +2,16 @@
   'use strict';
 angular
   .module('hexMix', [
-      'ngRoute'
+      'ngRoute',
+      'MainController'
     ])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/' {
+      .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainController'
       })
-      .when('/add' {
+      .when('/add', {
         templateUrl: 'views/add.html',
         controller: 'MainController'
       })
