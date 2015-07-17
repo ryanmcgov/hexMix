@@ -12,25 +12,25 @@ angular
       });
     });
 
-    $(body).on(‘click’, ‘.submit’, $scope.createNewPallette);
+    // $(body).on(‘click’, ‘.submit’, $scope.createNewPallette);
 
     $scope.addPalette = function (newPalette) {
       PaletteService.addPalette(newPalette);
     },
 
 
-    $scope.createNewPallette: function (title, keyword, hex1, hex2, hex3, hex4, hex5) {
+    $scope.createNewPallette = function (title, keyword, hex1, hex2, hex3, hex4, hex5) {
     	var newPalette = {
-    		title : title,
-    		keyword: keyword,
-    		hex1: hex1,
-        hex2: hex2,
-        hex3: hex3,
-        hex4: hex4,
-        hex5: hex5,
+    		title : $el.find('input[name="title"]').val(),
+    		keyword: $el.find('input[name="keyword"]').val(),
+    		hex1: $el.find('input[name="hex1"]').val(),
+        hex2: $el.find('input[name="hex2"]').val(),
+        hex3: $el.find('input[name="hex3"]').val(),
+        hex4: $el.find('input[name="hex4"]').val(),
+        hex5: $el.find('input[name="hex5"]').val(),
         }
         MainController.addPalette(newPalette);
-      });
+      };
 
 
 }());

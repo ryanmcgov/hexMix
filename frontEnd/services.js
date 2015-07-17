@@ -3,7 +3,7 @@
   angular
     .module('hexMix')
     .factory('PaletteService', function ($http, $rootScope){
-      var url = "";
+      var url = "http://tiy-fee-rest.herokuapp.com/collections/hexmix";
       var getPalettes = function () {
         return $http.get(url);
       };
@@ -18,7 +18,8 @@
 
       return {
         getPalettes: getPalettes,
-        getPalette: getPalette
+        getPalette: getPalette,
+        addPalette: addPalette
       };
 
     });
