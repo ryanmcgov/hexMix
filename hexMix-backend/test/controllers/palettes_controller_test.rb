@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Api::PaletteControllerTest < ActionController::TestCase
+class Api::PalettesControllerTest < ActionController::TestCase
   def setup
     @palette = palettes(:one)  
   end

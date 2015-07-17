@@ -1,4 +1,4 @@
-class Api::PaletteController < ApplicationController
+class Api::PalettesController < ApplicationController
  
 
   def index
