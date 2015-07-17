@@ -16,6 +16,8 @@
         });
       };
 
+      
+
       return {
         getPalettes: getPalettes,
         getPalette: getPalette,

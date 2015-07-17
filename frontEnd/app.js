@@ -3,6 +3,8 @@
 angular
   .module('hexMix', [
       'ngRoute',
+      'angularSpectrumColorpicker',
+      'spectrum'
     ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -21,4 +23,10 @@ angular
         redirectTo: '/404'
       });
   });
+
+angular.module('hexMix')
+  .factory('spectrum', function(window) {
+    return window.$.spectrum;
+  });
+
 }());
