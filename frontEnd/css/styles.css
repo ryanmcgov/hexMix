@@ -1,5 +1,5 @@
 * {
-  list-style: none;
+  list-style-type: none;
   padding: 0;
   margin: 0;
   text-decoration: none;
@@ -24,4 +24,21 @@ header {
 .Search {
   width: 100%;
   text-align: center;
+}
+
+.hexRectangle {
+  width: 90%;
+  height: 200px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.hex-area{
+  width: 20%;
+  height: 100%;
+}
+
+.hex-area > input {
+  width: 100%;
+  height: 100%;
 }

@@ -8,8 +8,6 @@ GOES HERE
 
 -->
 <h2>Inspect tha Hex</h2>
-<input type='text' class="basic"/>
-<em id='basic-log'></em>
 <div class="wrapper" ng-controller="MainController">
   <div class="input-boxes">
     <label>
@@ -20,21 +18,15 @@ GOES HERE
        Keywords:
        <input type="text" name="palette keyword" ng-model="palette.keyword" placeholder="tags, keywords, feelings, etc.">
     </label>
-    <button type="button" name="button">new palette!</button>
   </div>
   <div class="color-row">
     <h3>{{palette.title}}</h3><h5>{{palette.keyword}}</h5>
-    <ul>
-      <li class="hex-area" id="hex1"><input type="button" name="name" value="" ng-model="palette.hexes.hex1"></li>
-      <!--{{palette.hexName}} -->
-      <li class="hex-area" id="hex2"><input type="button" name="name" value="" ng-model="palette.hexes.hex2"></li>
-      <!--{{palette.hexName}}-->
-      <li class="hex-area" id="hex3"><input type="button" name="name" value="" ng-model="palette.hexes.hex3"></li>
-      <!--{{palette.hexName}}-->
-      <li class="hex-area" id="hex4"><input type="button" name="name" value="" ng-model="palette.hexes.hex4"></li>
-      <!--{{palette.hexName}}-->
-      <li class="hex-area" id="hex5"><input type="button" name="name" value="" ng-model="palette.hexes.hex5"></li>
-      <!--{{palette.hexName}}-->
+    <ul class="hexRectangle">
+      <li class="hex-area" id="hex1"><input type="text" name="name" value="" ng-model="palette.hexes.hex1" id="custom"></li>
+      <li class="hex-area" id="hex2"><input type="text" name="name" value="" ng-model="palette.hexes.hex2"></li>
+      <li class="hex-area" id="hex3"><input type="text" name="name" value="" ng-model="palette.hexes.hex3"></li>
+      <li class="hex-area" id="hex4"><input type="text" name="name" value="" ng-model="palette.hexes.hex4"></li>
+      <li class="hex-area" id="hex5"><input type="text" name="name" value="" ng-model="palette.hexes.hex5"></li>
     </ul>
      <button type="button" name="enter-palette" class="submit">palettized!</button>
   </div>
