@@ -1,8 +1,11 @@
 class Api::PaletteController < ApplicationController
-  
+ 
+
   def index
     @palettes = Palette.all
-    respond_to :json 
+    respond_to do |format|
+      format.json { render json: @palettes }
+    end
   end
 
   def show
