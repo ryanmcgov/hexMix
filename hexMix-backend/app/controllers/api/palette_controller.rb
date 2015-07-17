@@ -1,40 +1,43 @@
-class Api::PalettesController < ApplicationController
+class Api::PaletteController < ApplicationController
   
   def index
     @palettes = Palette.all
-    render json: Palette.all
+    respond_to :json 
   end
 
   def show
     @palette = get_palette
-      render :get_palette
+    respond_to do |format|
+      format.json { render json: @palette }
+    end
   end
 
   def create
-    @palettes = Palettes.new(palette_params)
-    if @palette.save
-      render status: 201
-    else
-      render json: @palette.errors, status: 422
+    @palette = Palette.new(palette_params)
+    respond_to do |format|
+      if @palette.save
+        format.json { render json: @palette, status: 201 }
+      else
+        format.json { render json: @palette.errors, status: 422 }
+      end
     end
   end
 
   def update
     @palette = get_palette
-    if @palette.update_attributes(palette_params)
-      render :updated
-    else 
-      render json: @palette.errors, status: 422
+    respond_to do |format|
+      if @palette.update_attributes(palette_params)
+        format.json { render json: @palette, status: 201 }
+      else
+        format.json { render json: @palette.errors, status: 422 }
+      end
     end
   end
 
   def destroy
-    @palettes = get_palette
-    if @palette.destroy
-      render head: 204
-    else
-      render json: @palette.errors, status: 422
-    end
+    @palette = get_palette
+    @palette.destroy
+      render json: @palette, status: 422 
   end
 
   private

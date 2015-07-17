@@ -4,7 +4,12 @@
 # # model remove the '{}' from the fixture names and add the columns immediately
 # # below each fixture, per the syntax in the comments below
 # #
-# one: {}
+one: 
+  hex1: '#fff'
+  hex2: '#fff'
+  hex3: '#fff'
+  hex4: '#fff'
+  hex5: '#fff'
 # # column: value
 # #
 # two: {}
