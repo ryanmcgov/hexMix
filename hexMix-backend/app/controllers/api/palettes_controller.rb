@@ -11,7 +11,7 @@ class Api::PalettesController < ApplicationController
   end
 
   def create
-    @palettes = Palettes.new(palette_params)
+    @palette = Palette.new(palette_params)
     if @palette.save
       render status: 201
     else
@@ -29,7 +29,7 @@ class Api::PalettesController < ApplicationController
   end
 
   def destroy
-    @palettes = get_palette
+    @palette = get_palette
     if @palette.destroy
       render head: 204
     else
