@@ -3,8 +3,7 @@
 angular
   .module('hexMix', [
       'ngRoute',
-      'angularSpectrumColorpicker',
-      'spectrum'
+      'angularSpectrumColorpicker'
     ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -24,9 +23,9 @@ angular
       });
   });
 
-angular.module('hexMix')
-  .factory('spectrum', function(window) {
-    return window.$.spectrum;
-  });
+// angular.module('hexMix')
+//   .factory('spectrum', function(window) {
+//     return window.$.spectrum;
+//   });
 
 }());
