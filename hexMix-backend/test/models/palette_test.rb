@@ -21,12 +21,6 @@ class PaletteTest < ActiveSupport::TestCase
     assert @palette.errors.keys.include?(:keyword)
   end
 
-  test 'does not duplicate palette title' do
-    @palette = Palette.new(title: 'recycle')
-    refute @palette.valid?
-    assert @palette.errors.keys.include?(:title)
-  end
-
   test 'title responds' do
     assert_respond_to @palette, :title
   end

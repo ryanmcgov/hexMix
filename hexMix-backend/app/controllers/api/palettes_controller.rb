@@ -1,7 +1,10 @@
 class Api::PalettesController < ApplicationController
-  
+
   def index
     @palettes = Palette.all
+    respond_to do |format|
+      format.json { render json: @palettes }
+    end
   end
 
   def show
@@ -35,11 +38,6 @@ class Api::PalettesController < ApplicationController
 
   def destroy
     @palette = get_palette
-    if @palette.destroy
-      render head: 204
-    else
-      render json: @palette.errors, status: 422
-    end
     @palette.destroy
       render json: @palette, status: 422 
   end

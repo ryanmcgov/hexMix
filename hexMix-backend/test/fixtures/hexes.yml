@@ -1,6 +1,17 @@
-one:
-  hex1: 'ffffff'
-  hex2: 'ffffff'
-  hex3: 'ffffff'
-  hex4: 'ffffff'
-  hex5: 'ffffff'
+# # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# # This model initially had no columns defined.  If you add columns to the
+# # model remove the '{}' from the fixture names and add the columns immediately
+# # below each fixture, per the syntax in the comments below
+# #
+one: 
+  hex1: '#fff'
+  hex2: '#fff'
+  hex3: '#fff'
+  hex4: '#fff'
+  hex5: '#fff'
+# # column: value
+# #
+# two: {}
+# #  column: value
+
