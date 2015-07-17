@@ -42,3 +42,7 @@ header {
   width: 100%;
   height: 100%;
 }
+
+.full-spectrum .sp-palette {
+max-width: 200px;
+}

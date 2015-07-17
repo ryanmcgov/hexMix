@@ -13,11 +13,17 @@ angular
       });
     });
 
-    $('.submit').on(‘click’, $scope.createNewPallette);
-
     $scope.addPalette = function (newPalette) {
       PaletteService.addPalette(newPalette);
     },
 
+    $(".basic").spectrum({
+        color: "#f00",
+        change: function(color) {
+            $("#hex1").text(color.toHexString());
+        }
 
+      });
+
+    });
 }());
