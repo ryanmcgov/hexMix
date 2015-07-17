@@ -3,7 +3,6 @@
 angular
   .module('hexMix', [
       'ngRoute',
-      'MainController'
     ])
   .config(function ($routeProvider) {
     $routeProvider
