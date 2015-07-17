@@ -16,8 +16,7 @@ angular
     $scope.$watch('hexes.hex1', function() {
       console.log("SHOW ME");
     })
-    $scope.paletteSubmit = function(paletteObject, hexObj) {
-      $scope.hexes = hexObj
+    $scope.paletteSubmit = function(paletteObject) {
       console.log("I'VE BEEN DEPRESSED", paletteObject);
       console.log("HEX", hexObj);
       if ($scope.title && $scope.keyword && $scope.hexes.hex1 && $scope.hexes.hex && $scope.hexes.hex3 && $scope.hexes.hex4 && $scope.hexes.hex5) {
@@ -25,11 +24,7 @@ angular
         newPalette = {
           title: $scope.title,
           keyword: $scope.keyword,
-          hexes: $scope.hexes.hex1,
-          hexes: $scope.hexes.hex2,
-          hexes: $scope.hexes.hex3,
-          hexes: $scope.hexes.hex4,
-          hexes: $scope.hexes.hex5,
+          hexes: $scope.hexes
         };
         console.log("INSIDE PALETTE", newPalette);
       }
@@ -44,37 +39,55 @@ angular
     // $scope.hexes.hex3 = "";
     // $scope.hexes.hex4 = "";
     // $scope.hexes.hex5 = "";
+    $scope.hexes = [];
 
-
-    // $(".basic").spectrum({
-    //     color: "#f00",
-    //     change: function(color) {
-    //         $("#hex1").text(color.toHexString());
-    //     }
-    //   });
-    // $(".basic2").spectrum({
-    //     color: "#f00",
-    //     change: function(color) {
-    //         $("#hex2").text(color.toHexString());
-    //     }
-    // });
-    // $(".basic3").spectrum({
-    //     color: "#f00",
-    //     change: function(color) {
-    //         $("#hex3").text(color.toHexString());
-    //     }
-    // });
-    // $(".basic4").spectrum({
-    //     color: "#f00",
-    //     change: function(color) {
-    //         $("#hex4").text(color.toHexString());
-    //     }
-    // });
-    // $(".basic5").spectrum({
-    //     color: "#f00",
-    //     change: function(color) {
-    //         $("#hex5").text(color.toHexString());
-    //     }
-    // });
+$(".basic").spectrum({
+     color: "#f00",
+     change: function(color) {
+         var hexVal = $("#hex1").text(color.toHexString());
+        //  hexVal[0].outerText.push($scope.hexes);
+         console.log(hexVal[0].outerText);
+         var finalHex = hexVal[0].outerText;
+         console.log(finalHex);
+         $scope.hexes.push(finalHex);
+         console.log($scope.hexes);
+     }
+   });
+ $(".basic2").spectrum({
+     color: "#f00",
+     change: function(color) {
+         var hexVal2 = $("#hex2").text(color.toHexString());
+         var finalHex2 = hexVal2[0].outerText;
+         $scope.hexes.push(finalHex2);
+         console.log($scope.hexes);
+     }
+ });
+ $(".basic3").spectrum({
+     color: "#f00",
+     change: function(color) {
+         var hexVal3 = $("#hex3").text(color.toHexString());
+         var finalHex3 = hexVal3[0].outerText;
+         $scope.hexes.push(finalHex3);
+         console.log($scope.hexes);
+     }
+ });
+ $(".basic4").spectrum({
+     color: "#f00",
+     change: function(color) {
+         var hexVal4 = $("#hex4").text(color.toHexString());
+         var finalHex4 = hexVal4[0].outerText;
+         $scope.hexes.push(finalHex4);
+         console.log($scope.hexes);
+     }
+ });
+ $(".basic5").spectrum({
+     color: "#f00",
+     change: function(color) {
+         var hexVal5 = $("#hex5").text(color.toHexString());
+         var finalHex5 = hexVal5[0].outerText;
+         $scope.hexes.push(finalHex5);
+         console.log($scope.hexes);
+     }
+ });
   });
 })();
