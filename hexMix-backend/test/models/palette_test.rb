@@ -22,7 +22,7 @@ class PaletteTest < ActiveSupport::TestCase
   end
 
   test 'does not duplicate palette title' do
-    @palette = Palette.new(title: 'Test')
+    @palette = Palette.new(title: 'recycle')
     refute @palette.valid?
     assert @palette.errors.keys.include?(:title)
   end

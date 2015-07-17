@@ -3,5 +3,6 @@ Rails.application.routes.draw do
     resources :palettes do
       resources :hexes
     end
+    # resources :palette
   end
 end
