@@ -11,12 +11,13 @@
         return palettes[index];
       };
       var addPalette = function (newPalette) {
+        console.log('Palette Service add palette running');
         $http.post(url, newPalette).then(function (data) {
         $rootScope.$broadcast('item:added');
         });
       };
 
-      
+
 
       return {
         getPalettes: getPalettes,
