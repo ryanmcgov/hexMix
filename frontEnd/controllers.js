@@ -37,8 +37,14 @@ angular
         };
         console.log("INSIDE PALETTE", newPalette);
         console.log("finalHexes", finalHexes)
+      $scope.addThisPalette(newPalette);
       return newPalette;
     };
+
+    $scope.addThisPalette = function (newPalette) {
+      PaletteService.addPalette(newPalette);
+      console.log('add this palette running');
+    }
 
 
 $(".basic").spectrum({
