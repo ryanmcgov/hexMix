@@ -2,7 +2,7 @@
   'use strict';
 angular
   .module('hexMix')
-  .controller('MainController', function ($scope, PaletteService) {
+  .controller('MainController', function ($scope, PaletteService, $rootScope) {
     PaletteService.getPalettes().success(function (palettes) {
       $scope.palettes = palettes;
     });
@@ -16,30 +16,30 @@ angular
     $scope.$watch('hexes.hex1', function() {
       console.log("SHOW ME");
     })
-    $scope.paletteSubmit = function(paletteObject) {
-      console.log("I'VE BEEN DEPRESSED", paletteObject);
-      console.log("HEX", hexObj);
-      if ($scope.title && $scope.keyword && $scope.hexes.hex1 && $scope.hexes.hex && $scope.hexes.hex3 && $scope.hexes.hex4 && $scope.hexes.hex5) {
+
+    $rootScope.hexes = [];
+
+    $scope.paletteSubmit = function(palette) {
+      console.log("IVE BEEN HEXED", $rootScope.hexes);
+      console.log("I'VE BEEN DEPRESSED", palette);
         var newPalette = {};
+        var finalHexes = {
+            hex1: $rootScope.hexes[0],
+            hex2: $rootScope.hexes[1],
+            hex3: $rootScope.hexes[2],
+            hex4: $rootScope.hexes[3],
+            hex5: $rootScope.hexes[4]
+        };
         newPalette = {
-          title: $scope.title,
-          keyword: $scope.keyword,
-          hexes: $scope.hexes
+          title: palette.title,
+          keyword: palette.keyword,
+          hexes: finalHexes
         };
         console.log("INSIDE PALETTE", newPalette);
-      }
-      console.log(newPalette);
+        console.log("finalHexes", finalHexes)
       return newPalette;
     };
-    //
-    // $scope.title = "";
-    // $scope.keyword = "";
-    // $scope.hexes.hex1 = "";
-    // $scope.hexes.hex2 = "";
-    // $scope.hexes.hex3 = "";
-    // $scope.hexes.hex4 = "";
-    // $scope.hexes.hex5 = "";
-    $scope.hexes = [];
+
 
 $(".basic").spectrum({
      color: "#f00",
