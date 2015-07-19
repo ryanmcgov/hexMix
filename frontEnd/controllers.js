@@ -19,6 +19,7 @@ angular
 
     $rootScope.hexes = [];
 
+
     $scope.paletteSubmit = function(palette) {
       console.log("IVE BEEN HEXED", $rootScope.hexes);
       console.log("I'VE BEEN DEPRESSED", palette);
@@ -45,7 +46,7 @@ angular
       PaletteService.addPalette(newPalette);
       console.log('add this palette running');
     }
-
+    
 
 $(".basic").spectrum({
      color: "#f00",
@@ -95,5 +96,7 @@ $(".basic").spectrum({
          console.log($scope.hexes);
      }
  });
-  });
+  })
+
+
 })();

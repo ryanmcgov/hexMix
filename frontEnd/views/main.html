@@ -1,17 +1,16 @@
 <input type="text" ng-model="search.keyword" placeholder="search keyword" class="Search">
-<div class ="paletteMainPage" ng-repeat="palette in palettes">
-  <ul>
-    <li class="hexBox" style="color:{{palette.hexes.hex1}}"><div class="hexText hideInfo">{{palette.hexes.hex1}}</div></li>
-    <li class="hexBox" style="color:{{palette.hexes.hex2}}"><div class="hexText hideInfo">{{palette.hexes.hex2}}</div></li>
-    <li class="hexBox" style="color:{{palette.hexes.hex3}}"><div class="hexText hideInfo">{{palette.hexes.hex3}}</div></li>
-    <li class="hexBox" style="color:{{palette.hexes.hex4}}"><div class="hexText hideInfo">{{palette.hexes.hex4}}</div></li>
-    <li class="hexBox" style="color:{{palette.hexes.hex5}}"><div class="hexText hideInfo">{{palette.hexes.hex5}}</div></li>
+<div class ="paletteMainPage" ng-repeat="palette in palettes | filter:search:strict" slide-toggle="#row_{{$index}}">
+  <ul class="mainTemplatteContainer">
+    <li class="hexBox" style="background-color:{{palette.hexes.hex1}}"><div class="hexText">{{palette.hexes.hex1}}</div></li>
+    <li class="hexBox" style="background-color:{{palette.hexes.hex2}}"><div class="hexText">{{palette.hexes.hex2}}</div></li>
+    <li class="hexBox" style="background-color:{{palette.hexes.hex3}}"><div class="hexText">{{palette.hexes.hex3}}</div></li>
+    <li class="hexBox" style="background-color:{{palette.hexes.hex4}}"><div class="hexText">{{palette.hexes.hex4}}</div></li>
+    <li class="hexBox" style="background-color:{{palette.hexes.hex5}}"><div class="hexText">{{palette.hexes.hex5}}</div></li>
   </ul>
-  <div class="hideInfo">
-    <ul>
+  <div id="row_{{$index}}" class="slideable">
+    <ul class="infoBox">
       <li class="infoTitleText">{{palette.title}}</li>
-      <li class="infoKeywordText">{{palette.keyword}}</li>
-      <li class="closeButton">Close</li>
+      <li class="infoKeywordText">#{{palette.keyword}}</li>
     </ul>
   </div>
 </div>
