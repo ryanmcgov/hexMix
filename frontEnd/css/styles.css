@@ -40,6 +40,10 @@ header {
 .hex-area{
   width: 20%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  line-height: 200px;
+  font-size: 3em;
 }
 
 .hex-area > input {
@@ -94,6 +98,12 @@ max-width: 200px;
 }
 .infoTitleText {
   font-size: 2em;
+}
+
+.liveInfo {
+  margin: 0 auto;
+  width: 80%;
+  height: 50px;
 }
 
 .paletteTitle {
