@@ -24,6 +24,8 @@ header {
 .Search {
   width: 100%;
   text-align: center;
+  margin-bottom: 10px;
+  height: 30px;
 }
 
 .hexRectangle {
@@ -31,11 +33,17 @@ header {
   height: 200px;
   display: flex;
   margin: 0 auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 .hex-area{
   width: 20%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  line-height: 200px;
+  font-size: 3em;
 }
 
 .hex-area > input {
@@ -45,4 +53,118 @@ header {
 
 .full-spectrum .sp-palette {
 max-width: 200px;
+}
+
+.hexBox {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainTemplatteContainer {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.hexText {
+  font-size: 4em;
+  color: rgba(255, 255, 255, 0);
+}
+
+.hexText:hover {
+  display: block;
+  font-size: 4em;
+  background-color: rgba(255, 255, 255, 0.22);
+  color: black;
+}
+
+.closeButton {
+  float: right;
+}
+
+.infoBox {
+  width: 100%;
+  height: 50px;
+  margin: 0 auto;
+  background-color: #efefef;
+}
+
+.hideInfo {
+  display: none;
+}
+.infoTitleText {
+  font-size: 2em;
+}
+
+.liveInfo {
+  margin: 0 auto;
+  width: 80%;
+  height: 50px;
+}
+
+.paletteTitle {
+  margin-top: 10px;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.paletteTitle > input {
+  width: 50%;
+  height: 50px;
+  border-radius: 6px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.paletteKeyword {
+  margin-top: 10px;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.paletteKeyword > input {
+  width: 50%;
+  height: 50px;
+  border-radius: 6px;
+  font-size: 1.5em;
+}
+
+.centerSubmit {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.submit {
+  width: 25%;
+  height: 50px;
+  border-radius: 6px;
+  font-size: 2em;
+  background-color: red;
+  border-radius: 6px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.sp-replacer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sp-preview {
+  width: 80%;
+  height: 80%;
 }

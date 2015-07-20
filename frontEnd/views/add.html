@@ -7,20 +7,18 @@ INFORMATION
 GOES HERE
 
 -->
-<h2>Inspect tha Hex</h2>
 <div class="wrapper" ng-controller="MainController">
   <div class="input-boxes">
-    <label>
-       Palette Title:
+    <div class="paletteTitle">
        <input type="text" name="palette title" ng-model="palette.title" placeholder="enter a name for your mix" required>
-    </label>
-    <label>
-       Keywords:
+    </div>
+    <div class="paletteKeyword">
        <input type="text" name="palette keyword" ng-model="palette.keyword" placeholder="tags, keywords, feelings, etc.">
-    </label>
+    </div>
   </div>
   <div class="color-row">
-    <h3>{{palette.title}}</h3><h5>{{palette.keyword}}</h5></h3>
+    <div class="liveInfo"><h1>Title: {{palette.title}}</h1><h3>Keyword: {{palette.keyword}}</h3></div>
+    <div class="centerSubmit"><a class="submit" ng-click="paletteSubmit(palette)" href="#/">palettize!</a></div>
    <ul class="hexRectangle">
   <li class="hex-area" id="hex1">
     <input type="text" name="name" value="" ng-model="hex1" class="basic">
@@ -32,13 +30,12 @@ GOES HERE
     <input type="text" name="name" value="" ng-model="hexes.hex3" class="basic3">
   </li>
   <li class="hex-area" id="hex4">
-    <input type="text" name="name" value="" ng-model="hexes.hex4" class="basic4">
+    <input type="text" name="text" value="" ng-model="hexes.hex4" class="basic4">
   </li>
   <li class="hex-area" id="hex5">
     <input type="text" name="name" value="" ng-model="hexes.hex5" class="basic5">
   </li>
 </ul>
-<button type="button" name="enter-palette" class="submit" ng-click="paletteSubmit(palette)">palettized!</button>
 <!--      Color: <ui-colorpicker ng-model="targetColor"></ui-colorpicker>
     <br />
     Text input: <input ng-model='targetColor' />

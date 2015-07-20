@@ -19,6 +19,7 @@
     "angular": "~1.4.3",
     "spectrum": "~1.7.0",
     "fontawesome": "~4.3.0",
-    "angular-spectrum-colorpicker": "~1.4.1"
+    "angular-spectrum-colorpicker": "~1.4.1",
+    "angular-animate": "~1.4.3"
   }
 }

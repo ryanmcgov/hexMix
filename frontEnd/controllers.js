@@ -19,6 +19,7 @@ angular
 
     $rootScope.hexes = [];
 
+
     $scope.paletteSubmit = function(palette) {
       console.log("IVE BEEN HEXED", $rootScope.hexes);
       console.log("I'VE BEEN DEPRESSED", palette);
@@ -48,7 +49,6 @@ angular
 
 
 $(".basic").spectrum({
-     color: "#f00",
      change: function(color) {
          var hexVal = $("#hex1").text(color.toHexString());
         //  hexVal[0].outerText.push($scope.hexes);
@@ -60,7 +60,6 @@ $(".basic").spectrum({
      }
    });
  $(".basic2").spectrum({
-     color: "#f00",
      change: function(color) {
          var hexVal2 = $("#hex2").text(color.toHexString());
          var finalHex2 = hexVal2[0].outerText;
@@ -69,7 +68,6 @@ $(".basic").spectrum({
      }
  });
  $(".basic3").spectrum({
-     color: "#f00",
      change: function(color) {
          var hexVal3 = $("#hex3").text(color.toHexString());
          var finalHex3 = hexVal3[0].outerText;
@@ -78,7 +76,6 @@ $(".basic").spectrum({
      }
  });
  $(".basic4").spectrum({
-     color: "#f00",
      change: function(color) {
          var hexVal4 = $("#hex4").text(color.toHexString());
          var finalHex4 = hexVal4[0].outerText;
@@ -87,7 +84,6 @@ $(".basic").spectrum({
      }
  });
  $(".basic5").spectrum({
-     color: "#f00",
      change: function(color) {
          var hexVal5 = $("#hex5").text(color.toHexString());
          var finalHex5 = hexVal5[0].outerText;
@@ -95,5 +91,7 @@ $(".basic").spectrum({
          console.log($scope.hexes);
      }
  });
-  });
+  })
+
+
 })();

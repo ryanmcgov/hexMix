@@ -3,7 +3,8 @@
 angular
   .module('hexMix', [
       'ngRoute',
-      'angularSpectrumColorpicker'
+      'ngAnimate',
+      'angularSlideables'
     ])
   .config(function ($routeProvider) {
     $routeProvider
